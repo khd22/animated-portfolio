@@ -1,6 +1,8 @@
 import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";
 import { motion } from "framer-motion";
+import linkedinIcon from "../../assets/images/linkedin.png";
+
 
 const Navbar = () => {
   return (
@@ -17,7 +19,7 @@ const Navbar = () => {
         </motion.span>
         <div className="social">
           <a href="https://www.linkedin.com/in/khaled-al-jaaidi-896141228" target="_blank" rel="noopener noreferrer">
-            <img src="/linkedin.png" alt="LinkedIn"   style={{ width: "32px", height: "32px" }}
+            <img src={linkedinIcon} alt="LinkedIn"   style={{ width: "32px", height: "32px" }}
             />
           </a>
         </div>
