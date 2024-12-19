@@ -27,6 +27,15 @@
         text-align: center;
       }
 
+      .scroll-icon {
+        width: 50px;
+        height: 50px;
+        background-image: url("/scroll.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
       h2 {
         font-size: 30px;
         color: rebeccapurple;
@@ -54,9 +63,9 @@
         }
       }
 
-      img {
-        width: 50px;
-      }
+      // img {
+      //   width: 50px;
+      // }
     }
   }
 

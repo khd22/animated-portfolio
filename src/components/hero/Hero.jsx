@@ -58,11 +58,10 @@ const Hero = () => {
             </motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button>
           </motion.div> */}
-          <motion.img
+          <motion.div 
+            className="scroll-icon"
             variants={textVariants}
             animate="scrollButton"
-            src="/scroll.png"
-            alt=""
           />
         </motion.div>
       </div>
