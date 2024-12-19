@@ -51,7 +51,7 @@ const Hero = () => {
           <motion.h1 variants={textVariants}>
             Software & ML Developer
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
+          {/* <motion.div variants={textVariants} className="buttons">
             <motion.a 
               href="#Portfolio"
               variants={textVariants}
@@ -70,7 +70,7 @@ const Hero = () => {
             >
               Contact Me
             </motion.a>
-          </motion.div>
+          </motion.div> */}
           <motion.img
             variants={textVariants}
             animate="scrollButton"

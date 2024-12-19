@@ -3,6 +3,11 @@ import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
+// EmailJS credentials
+const SERVICE_ID = "service_0e5t9pa"; 
+const TEMPLATE_ID = "template_26z834m";
+const PUBLIC_KEY = "Xd7dHN9niaMWIFmCX";  
+
 const variants = {
   initial: {
     y: 500,
@@ -28,20 +33,26 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    
     emailjs
       .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
+        SERVICE_ID,
+        TEMPLATE_ID,
         formRef.current,
-        "pX_2hasGmGcuvjXIW"
+        PUBLIC_KEY
       )
       .then(
         (result) => {
-          setSuccess(true)
+          setSuccess(true);
+          // Clear the form
+          formRef.current.reset();
+          // Reset success message after 5 seconds
+          setTimeout(() => setSuccess(false), 5000);
         },
         (error) => {
           setError(true);
+          // Reset error message after 5 seconds
+          setTimeout(() => setError(false), 5000);
         }
       );
   };
@@ -57,16 +68,18 @@ const Contact = () => {
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <h2>Email</h2>
+          <span>Kaljaaid@ucsc.edu</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Hello street New York</span>
+          <span>California, United States</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span>+1 234 5678</span>
+        <div className="social">
+          <a href="https://www.linkedin.com/in/khaled-al-jaaidi-896141228" target="_blank" rel="noopener noreferrer">
+Connect with me on LinkedIn!          </a>
+        </div>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -100,19 +113,20 @@ const Contact = () => {
           </svg>
         </motion.div>
         <motion.form
-          ref={formRef}
-          onSubmit={sendEmail}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 4, duration: 1 }}
-        >
-          <input type="text" required placeholder="Name" name="name"/>
-          <input type="email" required placeholder="Email" name="email"/>
-          <textarea rows={8} placeholder="Message" name="message"/>
-          <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
-        </motion.form>
+  ref={formRef}
+  onSubmit={sendEmail}
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ delay: 4, duration: 1 }}
+>
+  <input type="text" required placeholder="Your Name" name="from_name"/>
+  <input type="email" required placeholder="Your Email" name="email"/>
+  <textarea rows={8} placeholder="Message" name="message"/>
+  <input type="hidden" name="to_name" value="Khaled"/>
+  <button>Submit</button>
+  {error && "Error"}
+  {success && "Success"}
+</motion.form>
       </div>
     </motion.div>
   );
