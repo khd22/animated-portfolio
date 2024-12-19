@@ -1,4 +1,5 @@
 @import "../../app.scss";
+
 .services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   height: 100%;
@@ -18,24 +19,8 @@
       text-align: center;
       flex-direction: column;
     }
-
-    p {
-      font-weight: 200;
-      font-size: 20px;
-      color: gray;
-      text-align: right;
-    }
-
-    hr {
-      width: 500px;
-      border: none;
-      border-top: 0.5px solid gray;
-
-      @include mobile {
-        width: 300px;
-      }
-    }
   }
+
   .titleContainer {
     flex: 2;
     display: flex;
@@ -57,11 +42,13 @@
         gap: 20px;
       }
 
-      img {
+      .peopleImage {
         width: 300px;
         height: 100px;
         border-radius: 50px;
-        object-fit: cover;
+        background-image: url("/people.webp");
+        background-size: cover;
+        background-position: center;
 
         @include mobile {
           width: 200px;
@@ -77,24 +64,9 @@
           font-size: 36px;
         }
       }
-
-      button {
-        width: 300px;
-        height: 100px;
-        border-radius: 50px;
-        background-color: orange;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-
-        @include mobile {
-          font-size: 16px;
-          width: 150px;
-          height: 50px;
-        }
-      }
     }
   }
+
   .listContainer {
     flex: 2;
     display: flex;
@@ -123,22 +95,6 @@
       p {
         @include mobile {
           display: none;
-        }
-      }
-
-      button {
-        padding: 10px;
-        background-color: orange;
-        border: none;
-        cursor: pointer;
-
-        @include mobile {
-          background-color: transparent;
-          border: 1px solid orange;
-          border-radius: 5px;
-          color: orange;
-          width: 50%;
-          padding: 5px;
         }
       }
     }

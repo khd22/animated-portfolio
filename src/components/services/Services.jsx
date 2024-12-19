@@ -1,3 +1,4 @@
+// Services.jsx
 import { useRef } from "react";
 import "./services.scss";
 import { motion, useInView } from "framer-motion";
@@ -21,7 +22,6 @@ const variants = {
 
 const Services = () => {
   const ref = useRef();
-
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
@@ -29,21 +29,14 @@ const Services = () => {
       className="services"
       variants={variants}
       initial="initial"
-      // animate="animate"
-      // whileInView="animate"
       ref={ref}
       animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
-          {/* <p>
-            I focus on helping your business grow
-            <br /> by using technology and AI
-          </p> */}
-          {/* <hr /> */}
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/people.webp" alt="" />
+          <div className="peopleImage"></div>
           <h1>
             <motion.b style={{ color: "orange" }}>CS</motion.b> graduate
           </h1>
@@ -65,15 +58,16 @@ const Services = () => {
             This December, I graduated with a bachelor's degree in computer science from UCSC.
           </p>
         </motion.div>
-        
-      
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-         <h2>Skills and Experience</h2>
+          <h2>Skills and Experience</h2>
           <p>
-            Computer science graduate specializing in full-stack development and machine learning. Experienced in Python, React, and Docker, with proven expertise in implementing federated learning systems and CNN models. Passionate about building scalable applications and solving complex technical challenges through innovative solutions.
+            Computer science graduate specializing in full-stack development and machine learning. 
+            Experienced in Python, React, and Docker, with proven expertise in implementing 
+            federated learning systems and CNN models. Passionate about building scalable 
+            applications and solving complex technical challenges through innovative solutions.
           </p>
         </motion.div>
       </motion.div>
