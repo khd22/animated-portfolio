@@ -1,13 +1,18 @@
 import { useRef } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import imageGenPhoto from '../../assets/images/imagegen.png'  // adjust path as needed
+import imageGenPhoto from "../../assets/images/imageGen.png";
+import facial_recognition from "../../assets/images/Facial_recognition.png";
+import FL from "../../assets/images/FL.png";
+import kvs from '../../assets/images/kvs.png'
+
+
 
 const items = [
   {
     id: 1,
     title: "Federated Learning Platform",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: FL,
     desc: "Developed an open-source decentralized federated learning system using IBM's FL library and EdgeLake blockchain technology, earning an invitation to present the project to IBM's technical team and Linux Foundation",
 
   },
@@ -20,16 +25,16 @@ const items = [
   },
   {
     id: 3,
-    title: "Vanilla JS App",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Facial Recognition",
+    img: facial_recognition,
+    desc: "Built a Full-Stack web application that uses facial recognition to identify people in images and predict age, gender, and names.",
   },
   {
     id: 4,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  },
+    title: "Distributed Key-Value Store",
+    img: kvs,
+    desc: "Implemented a fault-tolerant, replicated key-value store with causal consistency. Built with containerized architecture, the system maintains data availability across multiple nodes, tracks causal dependencies between operations, and ensures eventual consistency across replicas. Features include automated replica management, distributed data replication, and a REST API interface.",
+  }
 ];
 
 const Single = ({ item }) => {
@@ -51,7 +56,12 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            {item.id === 2 && (
+              <a href="https://imageeditv2.d1t6iofhrx2j14.amplifyapp.com/" target="_blank" rel="noopener noreferrer">
+                <button>See Demo</button>
+              </a>
+            )}
+            {/* <button>See Demo</button> */}
           </motion.div>
         </div>
       </div>
