@@ -35,22 +35,22 @@ const Services = () => {
       animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
-        {/* <p>
-          I focus on helping your business grow
-          <br /> by using technology and AI
-        </p> */}
-        {/* <hr /> */}
+          {/* <p>
+            I focus on helping your business grow
+            <br /> by using technology and AI
+          </p> */}
+          {/* <hr /> */}
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>CS</motion.b> graduate
+            <motion.b style={{ color: "orange" }}>CS</motion.b> graduate
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Passionate</motion.b> about solving problems
+            <motion.b style={{ color: "orange" }}>Passionate</motion.b> about solving problems
           </h1>
         </div>
       </motion.div>
