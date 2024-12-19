@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://khd22.github.io/animated-portfolio/tree/portfolio",
+  "homepage": "https://khd22.github.io/animated-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

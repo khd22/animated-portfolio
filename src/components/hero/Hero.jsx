@@ -52,24 +52,11 @@ const Hero = () => {
             Software & ML Developer
           </motion.h1>
           {/* <motion.div variants={textVariants} className="buttons">
-            <motion.a 
-              href="#Portfolio"
-              variants={textVariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              style={{ textDecoration: 'none' }}
-            >
+            
+            <motion.button variants={textVariants}>
               See the Latest Works
-            </motion.a>
-            <motion.a 
-              href="#Contact"
-              variants={textVariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              style={{ textDecoration: 'none' }}
-            >
-              Contact Me
-            </motion.a>
+            </motion.button>
+            <motion.button variants={textVariants}>Contact Me</motion.button>
           </motion.div> */}
           <motion.img
             variants={textVariants}
