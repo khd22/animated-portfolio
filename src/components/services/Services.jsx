@@ -1,4 +1,3 @@
-// Services.jsx
 import { useRef } from "react";
 import "./services.scss";
 import { motion, useInView } from "framer-motion";
@@ -38,16 +37,20 @@ const Services = () => {
         <div className="title">
           <div className="peopleImage"></div>
           <h1>
-            <motion.b style={{ color: "orange" }}>CS</motion.b> graduate
+            <motion.b>CS</motion.b> graduate
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b style={{ color: "orange" }}>Passionate</motion.b> about solving problems
+            <motion.b>Passionate</motion.b> about solving problems
           </h1>
         </div>
       </motion.div>
-      <motion.div className="listContainer" variants={variants} style={{ paddingBottom: "50px" }}>
+      <motion.div 
+        className="listContainer" 
+        variants={variants}
+        style={{ paddingBottom: "50px" }}
+      >
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
@@ -55,14 +58,9 @@ const Services = () => {
           <h2>Education</h2>
           <ul className="education-list">
             <li>
-              
               <p><strong>Bachelor of Science in Computer Science</strong>University of California, Santa Cruz</p>
               <p>Graduated: December 2023</p>
             </li>
-            {/* <li>
-              <strong>Associate Degree in Computer Science and Mathematics</strong>
-              <p>Grossmont College</p>
-            </li> */}
           </ul>
         </motion.div>
         <motion.div
@@ -71,19 +69,8 @@ const Services = () => {
         >
           <h2>Skills</h2>
           <p>
-          focused on full-stack development and machine learning. Proficient in Python, React, and Docker, with experience in ML models and scalable applications. Passionate about solving bussiness problems through technology.
+            focused on full-stack development and machine learning. Proficient in Python, React, and Docker, with experience in ML models and scalable applications. Passionate about solving business problems through technology.
           </p>
-          {/* <ul className="education-list">
-            <li>
-              <p>Full-stack development</p>
-            </li>
-            <li>
-              <p>Machine learning</p>
-            </li>
-            <li>
-              <p>Web development</p>
-            </li>
-          </ul> */}
         </motion.div>
       </motion.div>
     </motion.div>
