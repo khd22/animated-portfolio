@@ -70,6 +70,7 @@ const Contact = () => {
         <motion.div className="item" variants={variants}>
           <h2>Email</h2>
           <span>Kaljaaid@ucsc.edu</span>
+          
         </motion.div>
         {/* <motion.div className="item" variants={variants}>
           <h2>Address</h2>
@@ -78,7 +79,8 @@ const Contact = () => {
         <motion.div className="item" variants={variants}>
         <div className="social">
           <a href="https://www.linkedin.com/in/khaled-al-jaaidi-896141228" target="_blank" rel="noopener noreferrer">
-Connect with me on LinkedIn!          </a>
+              Connect with me on LinkedIn!          
+          </a>
         </div>
         </motion.div>
       </motion.div>
