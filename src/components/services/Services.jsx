@@ -53,22 +53,37 @@ const Services = () => {
           whileHover={{ background: "lightgray", color: "black" }}
         >
           <h2>Education</h2>
-          <p>
-            I earned my associate degree in computer science and mathematics from Grossmont College.
-            This December, I graduated with a bachelor's degree in computer science from UCSC.
-          </p>
+          <ul className="education-list">
+            <li>
+              
+              <p><strong>Bachelor of Science in Computer Science</strong>University of California, Santa Cruz</p>
+              <p>Graduated: December 2023</p>
+            </li>
+            {/* <li>
+              <strong>Associate Degree in Computer Science and Mathematics</strong>
+              <p>Grossmont College</p>
+            </li> */}
+          </ul>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Skills and Experience</h2>
+          <h2>Skills</h2>
           <p>
-            Computer science graduate specializing in full-stack development and machine learning. 
-            Experienced in Python, React, and Docker, with proven expertise in implementing 
-            federated learning systems and CNN models. Passionate about building scalable 
-            applications and solving complex technical challenges through innovative solutions.
+          focused on full-stack development and machine learning. Proficient in Python, React, and Docker, with experience in ML models and scalable applications. Passionate about solving bussiness problems through technology.
           </p>
+          {/* <ul className="education-list">
+            <li>
+              <p>Full-stack development</p>
+            </li>
+            <li>
+              <p>Machine learning</p>
+            </li>
+            <li>
+              <p>Web development</p>
+            </li>
+          </ul> */}
         </motion.div>
       </motion.div>
     </motion.div>
