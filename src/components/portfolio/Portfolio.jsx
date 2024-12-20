@@ -20,14 +20,14 @@ const items = [
     id: 2,
     title: "ImageGen",
     img: imageGenPhoto,
-    desc: "Developed and integrated image generation models, specifically Stable Diusion.",
+    desc: "ImageGen is a full-stack web application that uses the power of Stable Diffusion to create AI-generated images. Built with a Python/Flask backend and React frontend, the platform allows users to generate, store, and manage their AI-created artwork through MongoDB integration. Users can input text prompts to create unique images, with results delivered through the intuitive web interface.",
 
   },
   {
     id: 3,
     title: "Facial Recognition",
     img: facial_recognition,
-    desc: "Built a Full-Stack web application that uses facial recognition to identify people in images and predict age, gender, and names.",
+    desc: "A full-stack web application leveraging computer vision and machine learning models to perform facial analysis. The system processes uploaded images to detect faces and predict multiple attributes including age, gender, and identity.",
   },
   {
     id: 4,
